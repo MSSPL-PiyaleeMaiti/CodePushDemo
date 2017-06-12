@@ -12,23 +12,14 @@ import {
   View
 } from 'react-native';
 
+import App from './app.js';
+
 import codePush from "react-native-code-push";
 
 class AwsomeProject extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to AwsomeProject!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <App />
     );
   }
 }
@@ -36,24 +27,5 @@ class AwsomeProject extends Component {
 AwsomeProject = codePush(AwsomeProject);
 
 export default  AwsomeProject;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('AwsomeProject', () => AwsomeProject);
